@@ -11,13 +11,30 @@ app.use('/js', express.static(path.join(__dirname,'node_modules/bootstrap/dist/j
 app.use('/js', express.static(path.join(__dirname,'node_modules/jquery/dist')))
 app.use('/public', express.static(path.join(__dirname,'public')))
 
+const fakeData = [
+    {
+        id: 1,
+        nome: 'João da Silva',
+        endereco: 'Rua Fulano 0543',
+        sexo: 'Masculino',
+        telefone: '5002-8922',
+    },
+    {
+        id: 2,
+        nome: 'Maria da Silva',
+        endereco: 'Rua Fulano 2533',
+        sexo: 'Feminino',
+        telefone: '8922-5002',
+    }   
+]
+
 app.get('/', (req, res) => {
     /* res.send('Hello World!'); */
     res.render('index')
 })
 
 app.get('/clientes', (req, res) => {
-    res.render('cliente/cliente')
+    res.render('cliente/cliente', {listaClientes: fakeData})
 })
 
 app.listen(80, () => {

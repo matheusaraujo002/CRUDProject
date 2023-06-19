@@ -11,12 +11,14 @@
         </tr>
     </thead>
     <tbody> {{!-- Conteúdo da tabela --}}
+        {{#each listaClientes}} {{!-- "For" do Handlebars --}}
         <tr>
-            <td>01</td>
-            <td>Zézinho da Silva</td>
-            <td>Rua Fulano 043</td>
-            <td>Masculino</td>
-            <td>99564-3436</td>
+            <td>{{this.id}}</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.endereco}}</td>
+            <td>{{this.sexo}}</td>
+            <td>{{this.telefone}}</td>
         </tr>
+        {{/each}}
     </tbody>
 </table>
