@@ -1,5 +1,4 @@
 * {
-    color: aliceblue;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -7,7 +6,9 @@
 
 .containerFooter {
     background-color: #404143;
-    margin-top: 30rem;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
   }
   
   .footerPrincipal {
@@ -40,11 +41,13 @@
   }
   
   .divisaoFooter {
+    color: aliceblue;
     opacity: 50%;
     border-radius: 2rem;
   }
   
   .copyright {
+    color: aliceblue;
     padding-top: 2rem;
     padding-bottom: 2rem;
     max-width: 25rem;

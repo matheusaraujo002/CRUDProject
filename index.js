@@ -45,7 +45,10 @@ app.get('/clientes/novo', (req, res) => {
 })
 
 app.post('/clientes/save', (req, res) => {
+
+    let maiorId = Math.max(...fakeData.map(o => o.id))
     let novoCliente = {
+        id: maiorId + 1,
         nome: req.body.nome,
         endereco: req.body.endereco,
         sexo: req.body.sexo,
