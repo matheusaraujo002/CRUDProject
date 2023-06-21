@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const { engine } = require('express-handlebars')
 const path = require('path')
+const bodyparser = require('body-parser')
 
+app.use(bodyparser.urlencoded({ extended: false }))
 app.set('view engine', 'handlebars')
 app.engine('handlebars', engine())
 
@@ -36,6 +38,21 @@ app.get('/', (req, res) => {
 
 app.get('/clientes', (req, res) => {
     res.render('cliente/cliente', {listaClientes: fakeData})
+})
+
+app.get('/clientes/novo', (req, res) => {
+    res.render('cliente/formcliente')
+})
+
+app.post('/clientes/save', (req, res) => {
+    let novoCliente = {
+        nome: req.body.nome,
+        endereco: req.body.endereco,
+        sexo: req.body.sexo,
+        telefone: req.body.telefone
+    }
+    fakeData.push(novoCliente)
+    res.redirect('/clientes')
 })
 
 app.listen(80, () => {
