@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/site.css">
+    <link rel="stylesheet" href="/public/styles/footer.css">
 </head>
 
 <body>
@@ -39,6 +38,27 @@
     <main class="container">
         {{{body}}}
     </main>
+    <div class="containerFooter">
+        <!-- height: 10rem -->
+        <footer class="footerPrincipal">
+          <ul class="listaLink">
+            <li class="footerInicio"><a class="linkInicio" href="#inicio">Início</a></li>
+            <li class="footerServicos"><a class="linkServicos" href="../pages/servicos.html">Serviços</a></li>
+            <li class="footerFAQs"><a class="linkFAQs" href="../pages/FAQs.html">FAQs</a></li>
+            <li class="footerSobre"><a class="linkSobre" href="#sobre">Sobre</a></li>
+          </ul>
+          <div class="containerEmpresa">
+            <hr class="divisaoFooter">
+              <p class="copyright">&copy; 2023 CRUD Project, Inc.</p>
+              <ul class="luSocial">
+                <!-- redes sociais -->
+                <li class="liTwitter"><a class="linkTwitter" target="_blank" href="https://twitter.com/"><img class="imgTwitter" src="twitter.png" alt="Twitter"></a></li>
+                <li class="liInstagram"><a class="linkInstagram" target="_blank" href="https://www.instagram.com/"><img class="imgInstagram" src="instagram.png" alt="Instagram"></a></li>
+                <li class="liFacebook"><a class="linkFacebook" target="_blank" href="https://www.facebook.com/"><img class="imgFacebook" src="facebook.png" alt="Facebook"></a></li>
+              </ul>
+          </div>
+        </footer>
+      </div>
 </body>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.js"></script>

@@ -10,6 +10,7 @@ app.use('/css', express.static(path.join(__dirname,'node_modules/bootstrap/dist/
 app.use('/js', express.static(path.join(__dirname,'node_modules/bootstrap/dist/js')))
 app.use('/js', express.static(path.join(__dirname,'node_modules/jquery/dist')))
 app.use('/public', express.static(path.join(__dirname,'public')))
+app.use(express.static('assets/images'))
 
 const fakeData = [
     {

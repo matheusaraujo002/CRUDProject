@@ -1,0 +1,70 @@
+* {
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+.containerFooter {
+    background-color: #404143;
+    margin-top: 30rem;
+  }
+  
+  .footerPrincipal {
+    font-family: 'Exo 2', sans-serif;
+    height: 13.625rem;
+  }
+  
+  .listaLink {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    list-style: none;
+  }
+  
+  .linkInicio, .linkServicos, .linkFAQs, .linkSobre {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footerInicio, .footerServicos, .footerFAQs, .footerSobre {
+    padding: 1.5rem;
+  }
+  
+  .containerEmpresa {
+    width: 75%;
+    margin: auto;
+  }
+  
+  .divisaoFooter {
+    opacity: 50%;
+    border-radius: 2rem;
+  }
+  
+  .copyright {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 25rem;
+    display: inline-block;
+  }
+  
+  .luSocial {
+    list-style: none;
+    float: right;
+  }
+  
+  .liTwitter, .liInstagram, .liFacebook {
+    display: inline-block;
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .imgTwitter, .imgInstagram, .imgFacebook {
+    width: 2rem;
+    height: 2rem;
+  }
