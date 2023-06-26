@@ -9,6 +9,7 @@
             <th>Endereço</th>
             <th>Sexo</th>
             <th>Telefone</th>
+            <th></th>
         </tr>
     </thead>
     <tbody> {{!-- Conteúdo da tabela --}}
@@ -19,6 +20,9 @@
             <td>{{this.endereco}}</td>
             <td>{{this.sexo}}</td>
             <td>{{this.telefone}}</td>
+            <td><a href="/clientes/alterar/{{this.id}}" class="btn btn-warning">Alterar</a>
+                <buttom class="btn btn-danger js-delete" data-id="{{this.id}}">Excluir</buttom>
+            </td>
         </tr>
         {{/each}}
     </tbody>

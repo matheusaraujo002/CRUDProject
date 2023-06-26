@@ -46,16 +46,34 @@ app.get('/clientes/novo', (req, res) => {
 
 app.post('/clientes/save', (req, res) => {
 
-    let maiorId = Math.max(...fakeData.map(o => o.id))
-    let novoCliente = {
-        id: maiorId + 1,
-        nome: req.body.nome,
-        endereco: req.body.endereco,
-        sexo: req.body.sexo,
-        telefone: req.body.telefone
+    let clienteAntigo = fakeData.find(o => o.id == req.body.id)
+    
+    if(clienteAntigo != undefined) {
+        clienteAntigo.nome = req.body.nome
+        clienteAntigo.endereco = req.body.endereco
+        clienteAntigo.sexo = req.body.sexo
+        clienteAntigo.telefone = req.body.telefone
+    }else {
+        let maiorId = Math.max(...fakeData.map(o => o.id))
+        let novoCliente = {
+            id: maiorId + 1,
+            nome: req.body.nome,
+            endereco: req.body.endereco,
+            sexo: req.body.sexo,
+            telefone: req.body.telefone
+        }
+        fakeData.push(novoCliente)
     }
-    fakeData.push(novoCliente)
     res.redirect('/clientes')
+})
+
+app.get('/clientes/alterar/:id', (req, res) => {
+    let id = req.params['id']
+
+    // Procura um cliente pelo id
+    let umCliente = fakeData.find(o => o.id == id)
+
+    res.render('cliente/formcliente', {cliente: umCliente})
 })
 
 app.listen(80, () => {

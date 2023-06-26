@@ -2,24 +2,27 @@
 <hr>
 
 <form action="/clientes/save" method="POST">
+
+    <input type="hidden" name="id" value="{{cliente.id}}">
+
     <div class="form-group">
         <label for="textnome">Nome:</label>
-        <input type="text" class="form-control" id="txtnome" name="nome" required>
+        <input type="text" class="form-control" value="{{cliente.nome}}" id="txtnome" name="nome" required>
     </div>
 
     <div class="form-group">
         <label for="">Endereço:</label>
-        <input type="text" class="form-control" id="txtendereco" name="endereco" required>
+        <input type="text" class="form-control" value="{{cliente.endereco}}" id="txtendereco" name="endereco" required>
     </div>
 
     <div class="form-group">
         <label for="textsexo">Sexo:</label>
-        <input type="text" class="form-control" id="txtsexo" name="sexo" required>
+        <input type="text" class="form-control" value="{{cliente.sexo}}" id="txtsexo" name="sexo" required>
     </div>
 
     <div class="form-group">
         <label for="texttelefone">Telefone:</label>
-        <input type="text" class="form-control" id="txttelefone" name="telefone" required>
+        <input type="text" class="form-control" value="{{cliente.telefone}}" id="txttelefone" name="telefone" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar</button>
