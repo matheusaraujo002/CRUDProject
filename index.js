@@ -76,6 +76,15 @@ app.get('/clientes/alterar/:id', (req, res) => {
     res.render('cliente/formcliente', {cliente: umCliente})
 })
 
+app.get('/clientes/delete/:id', (req, res) => {
+    let cliente = fakeData.find(o => o.id == req.params['id'])
+    let posicaoCliente = fakeData.indexOf(cliente)
+    if (posicaoCliente > -1){
+        fakeData.splice(posicaoCliente,1) //remove o cliente        
+    }
+    res.redirect('/clientes')
+})
+
 app.listen(80, () => {
     console.log('Servidor rodando...');
     console.log('http://localhost/');
